@@ -1,0 +1,28 @@
+{
+  "name": " ",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "keywords": [
+    ""
+  ],
+  "license": "",
+  "author": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "tailwindcss -i ./css/style.css -o ./css/output.css --watch",
+    "start": "webpack serve --open --config webpack.config.dev.js",
+    "dev": "concurrently --names \"tailwind,webpack\" --prefix-colors \"yellow,blue\" --kill-others \"npm:tailwind\" \"npm:start\"",
+    "build": "webpack --config webpack.config.prod.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "html-webpack-plugin": "^5.5.3",
+    "tailwindcss": "^3.4.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
+  }
+}
